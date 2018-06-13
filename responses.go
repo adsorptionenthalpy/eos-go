@@ -104,14 +104,16 @@ type CurrencyBalanceResp struct {
 }
 
 type GetTableRowsRequest struct {
-	JSON       bool   `json:"json"`
-	Scope      string `json:"scope"`
-	Code       string `json:"code"`
-	Table      string `json:"table"`
-	TableKey   string `json:"table_key"`
-	LowerBound string `json:"lower_bound"`
-	UpperBound string `json:"upper_bound"`
-	Limit      uint32 `json:"limit,omitempty"` // defaults to 10 => chain_plugin.hpp:struct get_table_rows_params
+	JSON             bool   `json:"json"`
+	Scope            string `json:"scope"`
+	Code             string `json:"code"`
+	Table            string `json:"table"`
+	TableKey         string `json:"table_key"`
+	LowerBound       string `json:"lower_bound"`
+	UpperBound       string `json:"upper_bound"`
+	Limit            uint32 `json:"limit,omitempty"` // defaults to 10 => chain_plugin.hpp:struct get_table_rows_params
+	SecKeyType       string `json:"sec_key_type"`
+	SecIndexPosition uint32 `json:"sec_index_position"`
 }
 
 type GetTableRowsResp struct {
